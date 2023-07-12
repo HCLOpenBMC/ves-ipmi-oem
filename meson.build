@@ -27,8 +27,6 @@ add_project_arguments(
 
 fs = import('fs')
 
-root_inc = include_directories('.', 'include')
-
 # Dependencies
 sdbusplus_dep = dependency('sdbusplus')
 phosphor_dbus_interfaces_dep = dependency('phosphor-dbus-interfaces')
