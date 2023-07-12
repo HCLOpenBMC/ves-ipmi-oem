@@ -32,8 +32,6 @@ sdbusplus_dep = dependency('sdbusplus')
 phosphor_dbus_interfaces_dep = dependency('phosphor-dbus-interfaces')
 phosphor_logging_dep = dependency('phosphor-logging')
 ipmid_dep = dependency('libipmid')
-channellayer_dep = dependency('libchannellayer')
-userlayer_dep = dependency('libuserlayer')
 
 if cpp.has_header_symbol(
         'nlohmann/json.hpp',
@@ -47,13 +45,11 @@ endif
 zfboemcmds_pre = declare_dependency(
   include_directories: root_inc,
   dependencies: [
-    channellayer_dep,
     ipmid_dep,
     nlohmann_json_dep,
     phosphor_dbus_interfaces_dep,
     phosphor_logging_dep,
     sdbusplus_dep,
-    userlayer_dep,
   ])
 
 zfboemcmds_lib = library(
