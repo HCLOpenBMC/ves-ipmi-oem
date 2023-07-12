@@ -43,7 +43,6 @@ else
 endif
 
 zfboemcmds_pre = declare_dependency(
-  include_directories: root_inc,
   dependencies: [
     ipmid_dep,
     nlohmann_json_dep,
